@@ -12,7 +12,7 @@ using ConselhoDeClasse.Models;
 
 namespace ConselhoDeClasse.Controllers
 {
-    [Authorize]
+
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -21,9 +21,8 @@ namespace ConselhoDeClasse.Controllers
 
         public AccountController()
         {
-
+            //inicializei o construtor 
             context = new ApplicationDbContext();
-
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -139,8 +138,9 @@ namespace ConselhoDeClasse.Controllers
         }
 
         //
-        // GET: /Account/Register
-        [AllowAnonymous]
+       // GET: /Account/Register
+       //Mudei a 
+        [Authorize(Roles = "admin")]
         public ActionResult Register()
         {
             ViewBag.Name = new SelectList(context.Roles.ToList(), "Name", "Name");
@@ -150,7 +150,7 @@ namespace ConselhoDeClasse.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
