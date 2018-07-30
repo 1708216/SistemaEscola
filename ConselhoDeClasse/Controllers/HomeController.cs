@@ -8,9 +8,10 @@ namespace ConselhoDeClasse.Controllers
 {
 
     //incorporei a anotação para só permitir acesso de pessoas logadas no sistema.
-    //[Authorize]
+    [Authorize]
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             return View();

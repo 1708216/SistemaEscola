@@ -64,6 +64,13 @@ namespace ConselhoDeClasse.Models
 
     public class RegisterViewModel
     {
+
+        //Está propriedade será responsável para atribuir um perfil ao usuário que será 
+        //criado pelo administrador.
+        [Display(Name ="Nome")]
+        public string Name { get; set; }
+
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

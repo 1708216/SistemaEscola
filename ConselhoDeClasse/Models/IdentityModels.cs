@@ -20,7 +20,9 @@ namespace ConselhoDeClasse.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //método utilizado para realizar a conexão com o banco default onde estão as tabelas: Users e Roles
         public ApplicationDbContext()
+
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
