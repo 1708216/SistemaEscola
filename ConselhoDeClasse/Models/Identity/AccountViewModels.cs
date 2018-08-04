@@ -1,6 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
+
+//View models utilizadas para realizar o Login, registro de conta , 
+//login externo , e recuperação de senha do Identity.
+
+
 namespace ConselhoDeClasse.Models
 {
     public class ExternalLoginConfirmationViewModel
@@ -64,13 +69,19 @@ namespace ConselhoDeClasse.Models
 
     public class RegisterViewModel
     {
+
+        //Está propriedade será responsável para atribuir um perfil ao usuário que será 
+        //criado pelo administrador.
+        [Display(Name ="Nome")]
+        public string Name { get; set; }
+       
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 1)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -108,5 +119,8 @@ namespace ConselhoDeClasse.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+
+
     }
 }
