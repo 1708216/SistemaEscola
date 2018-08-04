@@ -1,4 +1,5 @@
 ﻿using ConselhoDeClasse.Models;
+
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Linq;
 using System.Web.Mvc;

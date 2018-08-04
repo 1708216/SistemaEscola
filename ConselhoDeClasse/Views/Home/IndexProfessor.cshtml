@@ -1,8 +1,15 @@
-﻿
+﻿@using Microsoft.AspNet.Identity
+@using ConselhoDeClasse.Models
+
 @{
     ViewBag.Title = "IndexProfessor";
     Layout = "~/Views/Shared/_Layoutprofessor.cshtml";
 
+}
+@{ 
+    HttpContext.Current.User.Identity.GetUserId();
+    string userId = User.Identity.GetUserId();
+    var user = (new ApplicationDbContext()).Users.FirstOrDefault(s => s.Id == userId);
 }
 
 <style>
@@ -74,4 +81,3 @@
         <p><a class="btn btn-default" href="http://www.revistaeducacao.com.br/como-funciona-premiacao-professores-considerada-nobel-da-educacao/">Learn more &raquo;</a></p>
     </div>
 </div>
-
