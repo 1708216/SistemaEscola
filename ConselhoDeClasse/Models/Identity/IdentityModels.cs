@@ -17,6 +17,11 @@ namespace ConselhoDeClasse.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Matricula { get; set; }
+
+
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

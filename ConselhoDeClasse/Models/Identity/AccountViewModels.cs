@@ -74,6 +74,9 @@ namespace ConselhoDeClasse.Models
         //criado pelo administrador.
         [Display(Name ="Nome")]
         public string Name { get; set; }
+
+        [Display (Name= "Matrícula")]
+        public string Matricula { get; set; }
        
         [Required]
         [EmailAddress]
