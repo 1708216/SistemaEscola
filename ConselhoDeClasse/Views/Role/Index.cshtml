@@ -6,20 +6,26 @@
 <p>
     @Html.ActionLink("Criar Novo Perfil", "Create")
 </p>
-<table class="table">
+<table class="table table-striped">
+<thead>
     <tr>
-        <th>
-            @Html.Label("Nome do Perfil")
-        </th>
-        <th></th>
+        <th scope="col">#</th>
+        <th scope="col">Perfil</th>
+        <th scope="col">Descrição das permissões</th>
     </tr>
+</thead>
+<tbody>
     @foreach (var item in Model)
     {
+
         <tr>
-            <td>
+            <td> </td>
+            <td  style="font-size:20px">
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
+            <td></td>
         </tr>
     }
+</tbody>
 </table>
 

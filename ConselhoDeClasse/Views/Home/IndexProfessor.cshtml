@@ -7,9 +7,9 @@
 
 }
 @{ 
-    HttpContext.Current.User.Identity.GetUserId();
     string userId = User.Identity.GetUserId();
     var user = (new ApplicationDbContext()).Users.FirstOrDefault(s => s.Id == userId);
+    
 }
 
 <style>
@@ -34,7 +34,7 @@
     <br />
     <div class="demo-card-wide mdl-card mdl-shadow--8dp">
         <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Welcome</h2>
+            <h2 class="mdl-card__title-text">Welcome @user.Matricula</h2>
         </div>
         <div class="mdl-card__supporting-text">
             <p>

@@ -15,7 +15,7 @@ namespace MeusModelos
         public string Nome { get; set; }
 
         public bool Situacao { get; set; }
-        public int Matricula { get; set; }
+        public string Matricula { get; set; }
         public string Senha { get; set; }
 
 
