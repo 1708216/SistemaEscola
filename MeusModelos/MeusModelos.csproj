@@ -54,7 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aluno.cs" />
+    <Compile Include="AtribuicaoDeAulaViewModel.cs" />
     <Compile Include="Disciplina.cs" />
+    <Compile Include="DistribuicaoDeAulaViewModel.cs" />
+    <Compile Include="FichaDeConselho.cs" />
+    <Compile Include="FichaDeDistribuicao.cs" />
+    <Compile Include="FichaDeMatricula.cs" />
+    <Compile Include="IniciaConselhoViewModel.cs" />
+    <Compile Include="MatriculaViaTurmaViewModel.cs" />
+    <Compile Include="MatriculaViewModel.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Turma.cs" />

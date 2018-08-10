@@ -46,11 +46,12 @@ namespace ConselhoDeClasse.Controllers
                 contexto.Turmas.Add(turma);
                 contexto.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Cadastro");
             }
             catch
             {
-                return View("Index", "Cadastro");
+              
+                return RedirectToAction("Index", "Cadastro");
             }
         }
 

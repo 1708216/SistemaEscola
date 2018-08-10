@@ -193,10 +193,14 @@
     <Compile Include="Controllers\AlunoController.cs" />
     <Compile Include="Controllers\CadastroController.cs" />
     <Compile Include="Controllers\DisciplinaController.cs" />
+    <Compile Include="Controllers\FichaDeConselhoController.cs" />
+    <Compile Include="Controllers\FichaDeDistribuicaoController.cs" />
+    <Compile Include="Controllers\FichaDeMatriculaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\TesteController.cs" />
     <Compile Include="Controllers\TurmaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -283,7 +287,11 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Aluno\" />
     <Folder Include="Views\Disciplina\" />
+    <Folder Include="Views\FichaDeConselho\" />
+    <Folder Include="Views\FichaDeDistribuicao\" />
+    <Folder Include="Views\FichaDeMatricula\" />
     <Folder Include="Views\Professor\" />
+    <Folder Include="Views\Teste\" />
     <Folder Include="Views\Turma\" />
   </ItemGroup>
   <ItemGroup>

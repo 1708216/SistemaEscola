@@ -6,11 +6,12 @@ namespace MeusModelos
     public class Turma
     {
         public int TurmaID { get; set; }
+        
         public string Serie { get; set; }
-
-        [Required, StringLength(30)]
+     
         public string Nome { get; set; }
-
+        [Display(Name = "turno")]
+        [Required(ErrorMessage = "Favor preencher o campo Título.")]
         public string Turno { get; set; }
     }
 }
