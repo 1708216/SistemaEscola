@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeusModelos
 {
-    class DistribuicaoDeAulaViewModel
+    public class DistribuicaoDeAulaViewModel
     {
         public int itemSelecionado { get; set; }
 

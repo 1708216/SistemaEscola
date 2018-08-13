@@ -19,10 +19,8 @@ namespace ConselhoDeClasse.Models
         }
 
         public string Matricula { get; set; }
-
-
-
-    }
+           
+      }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

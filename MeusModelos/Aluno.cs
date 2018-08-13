@@ -14,5 +14,13 @@ namespace MeusModelos
         public string Nome { get; set; }
         public int CGM { get; set; }
         public string Foto { get; set; }
+
+        public int FichaDeMatriculaID { get; set; }
+        public virtual List<FichaDeMatricula> Matriculas { get; set; }
+
+        public int FichaDeConselhoID { get; set; }
+        public virtual List<FichaDeConselho> ListaDeConselhos { get; set; }
+
+
     }
 }

@@ -10,12 +10,14 @@ namespace ConselhoDeClasse.Models.Dal
         {
             Database.SetInitializer(new ConselhoDeClasseDBInitializer());
         }
-    
-        public DbSet<Usuario> Usuarios { get; set; }
+
         public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Disciplina> Disciplinas { get; set; }
         public DbSet<Professor> Professores { get; set; }
         public DbSet<Turma> Turmas { get; set; }
-
+        public DbSet<FichaDeMatricula> FichasDeMatricula { get; set; }
+        public DbSet<FichaDeDistribuicao> FichasDeDistribuicao { get; set; }
+        public DbSet<FichaDeConselho> FichasDeConselho { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

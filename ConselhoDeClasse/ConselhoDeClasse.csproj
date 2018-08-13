@@ -236,7 +236,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -282,17 +284,37 @@
     <Content Include="Views\Cadastro\_CadastroProfessor.cshtml" />
     <Content Include="Views\Cadastro\_CadastroDisciplina.cshtml" />
     <Content Include="Views\Cadastro\_CadastroTurma.cshtml" />
+    <Content Include="Views\Aluno\Delete.cshtml" />
+    <Content Include="Views\Aluno\Details.cshtml" />
+    <Content Include="Views\Aluno\Edit.cshtml" />
+    <Content Include="Views\Aluno\Index.cshtml" />
+    <Content Include="Views\Disciplina\Delete.cshtml" />
+    <Content Include="Views\Disciplina\Details.cshtml" />
+    <Content Include="Views\Disciplina\Edit.cshtml" />
+    <Content Include="Views\Disciplina\Index.cshtml" />
+    <Content Include="Views\FichaDeConselho\AvaliaAluno.cshtml" />
+    <Content Include="Views\FichaDeConselho\EscolhaTurmas.cshtml" />
+    <Content Include="Views\FichaDeConselho\Index.cshtml" />
+    <Content Include="Views\FichaDeConselho\IniciaConselho.cshtml" />
+    <Content Include="Views\FichaDeDistribuicao\AtribuicaoDeAula.cshtml" />
+    <Content Include="Views\FichaDeDistribuicao\EfetivaDistribuicao.cshtml" />
+    <Content Include="Views\FichaDeDistribuicao\Index.cshtml" />
+    <Content Include="Views\FichaDeMatricula\Index.cshtml" />
+    <Content Include="Views\FichaDeMatricula\Index2.cshtml" />
+    <Content Include="Views\FichaDeMatricula\Matricular.cshtml" />
+    <Content Include="Views\FichaDeMatricula\MatricularViaSala.cshtml" />
+    <Content Include="Views\Professor\Delete.cshtml" />
+    <Content Include="Views\Professor\Details.cshtml" />
+    <Content Include="Views\Professor\Edit.cshtml" />
+    <Content Include="Views\Professor\Index.cshtml" />
+    <Content Include="Views\Teste\Index.cshtml" />
+    <Content Include="Views\Turma\Delete.cshtml" />
+    <Content Include="Views\Turma\Details.cshtml" />
+    <Content Include="Views\Turma\Edit.cshtml" />
+    <Content Include="Views\Turma\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Aluno\" />
-    <Folder Include="Views\Disciplina\" />
-    <Folder Include="Views\FichaDeConselho\" />
-    <Folder Include="Views\FichaDeDistribuicao\" />
-    <Folder Include="Views\FichaDeMatricula\" />
-    <Folder Include="Views\Professor\" />
-    <Folder Include="Views\Teste\" />
-    <Folder Include="Views\Turma\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

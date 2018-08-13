@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeusModelos
 {
-    class IniciaConselhoViewModel
+    public class IniciaConselhoViewModel
     {
         public int TurmaID { get; set; }
         public virtual Turma _Turma { get; set; }

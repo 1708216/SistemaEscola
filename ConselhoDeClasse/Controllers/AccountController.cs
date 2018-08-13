@@ -158,10 +158,12 @@ namespace ConselhoDeClasse.Controllers
                 var user = new ApplicationUser
                 {
                   UserName = model.Email,
-                  Email = model.Email
+                  Email = model.Email,
+      
                 };
 
                 user.Matricula = model.Matricula;
+
                 var result = await UserManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)

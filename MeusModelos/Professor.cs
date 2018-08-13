@@ -17,7 +17,8 @@ namespace MeusModelos
         public bool Situacao { get; set; }
         public string Matricula { get; set; }
         public string Senha { get; set; }
-
+        public int FichaDeDistribuicaoID { get; set; }
+        public List<FichaDeDistribuicao> ListaDeDistribuicao { get; set; }
 
     }
 }

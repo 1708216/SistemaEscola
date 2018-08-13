@@ -11,12 +11,12 @@
     <div class="mdl-tabs__tab-bar">
         <a href="#alunos" class="mdl-tabs__tab is-active">Alunos</a>
         <a href="#disciplinas" class="mdl-tabs__tab">Disciplinas</a>
+        <a href="#login" class="mdl-tabs__tab">Login usuario</a>
         <a href="#professores" class="mdl-tabs__tab">Professores</a>
         <a href="#turmas" class="mdl-tabs__tab">Turmas</a>
     </div>
     <div class="mdl-tabs__panel is-active" id="alunos">
         <br />
-
         @{
             Html.RenderPartial("_CadastroAluno");
         }
@@ -25,6 +25,12 @@
         <br />
         @{
             Html.RenderPartial("_CadastroDisciplina");
+        }
+    </div>
+    <div class="mdl-tabs__panel" id="login">
+        <br />
+        @{
+            Html.RenderPartial("~/Views/Account/_PartialRegister.cshtml");
         }
     </div>
     <div class="mdl-tabs__panel" id="professores">

@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Projeto Sala</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Links -->
+    <link rel="stylesheet" type="text/css" href="css/Site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+
+    <!-- Scripts -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+</head>
+<body>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <div class="mdl-layout-spacer">
+                    <span class="mdl-layout-title">Dashboard</span>
+                </div>
+        </header>
+        <div class="mdl-layout__drawer bg-light">
+            <i class="material-icons float-right text-dark mt-4" style="font-size: 7em; text-align: center;">school</i>
+            <h4 style="text-align: center; font-family: Roboto;"><strong>Aula Project</strong></h4>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link text-dark" href="">Dashboard <i class="material-icons float-right text-primary">assessment</i></a>
+                <a class="mdl-navigation__link text-dark" href="alunos.html">Alunos <i class="material-icons float-right text-primary">school</i></a>
+                <a class="mdl-navigation__link text-dark" href="professores.html">Professores <i class="material-icons float-right text-primary">assignment_ind</i></a>
+                <a class="mdl-navigation__link text-dark" href="conselhos.html">Conselhos <i class="material-icons float-right text-primary">timeline</i></a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content p-4">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow-box card-new side-left-border-green">
+                            <div class="card-body">
+                                <a>Total de salas</a>
+                                <a class="content-count float-right">32</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-box card-new side-left-border side-left-border-yellow">
+                            <div class="card-body">
+                                <a>Total de professores</a>
+                                <a class="content-count float-right">42</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-box card-new side-left-border side-left-border-blue">
+                            <div class="card-body">
+                                <a>Total de conselhos</a>
+                                <a class="content-count float-right">15</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-primary mt-4" role="alert">
+                    O próximo conselho de classe está programado para dia <strong>24/05/2018</strong>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <h5 class="card-header">Alguma medida</h5>
+                            <canvas id="myChart" height="200"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <h5 class="card-header">Outra medida</h5>
+                            <canvas id="myChart2" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6 mt-1">
+                        <div class="card">
+                            <h5 class="card-header bg-orange text-white">Últimos alunos cadastrados <i class="material-icons text-white float-right">account_box</i></h5>
+                            <div class="card-body no-padding">
+                                <div class="demo-list-action mdl-list ">
+                                    <div class="mdl-list__item ">
+                                        <span class="mdl-list__item-primary-content">
+                                            <i class="material-icons mdl-list__item-avatar">person</i>
+                                            <span>Lucas Carvalho</span>
+                                        </span>
+                                    </div>
+                                    <div class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <i class="material-icons mdl-list__item-avatar">person</i>
+                                            <span>Marcelo Araujo</span>
+                                        </span>
+                                    </div>
+                                    <div class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <i class="material-icons mdl-list__item-avatar">person</i>
+                                            <span>Fernando de ramos</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="
+						mdl-button mdl-js-button mdl-js-ripple-effect float-right text-primary">
+                                    Ver todos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-1">
+                        <div class="card">
+                            <h5 class="card-header bg-orange text-white">Últimos professores cadastrados <i class="material-icons text-white float-right">account_box</i></h5>
+                            <div class="card-body no-padding">
+                                <div class="demo-list-action mdl-list ">
+                                    <div class="mdl-list__item ">
+                                        <span class="mdl-list__item-primary-content">
+                                            <i class="material-icons mdl-list__item-avatar">person</i>
+                                            <span>Lucas Carvalho</span>
+                                        </span>
+                                    </div>
+                                    <div class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <i class="material-icons mdl-list__item-avatar">person</i>
+                                            <span>Marcelo Araujo</span>
+                                        </span>
+                                    </div>
+                                    <div class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <i class="material-icons mdl-list__item-avatar">person</i>
+                                            <span>Fernando de ramos</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="
+						mdl-button mdl-js-button mdl-js-ripple-effect float-right text-primary">
+                                    Ver todos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <h5 class="card-header">Últimos conselhos realizados <i class="material-icons text-primary float-right">account_box</i></h5>
+                            <div class="card-body no-padding">
+                                <div class="demo-list-action mdl-list ">
+                                    <div class="mdl-list__item ">
+                                        <span class="mdl-list__item-primary-content">
+                                            <span>1 - 23/05/2018</span>
+                                        </span>
+                                    </div>
+                                    <div class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <span>2 - 23/05/2018</span>
+                                        </span>
+                                    </div>
+                                    <div class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <span>3 - 23/05/2018</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="
+						mdl-button mdl-js-button mdl-js-ripple-effect float-right text-primary">
+                                    Ver todos
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+                datasets: [{
+                    label: 'Quantidade de reports',
+                    data: [10, 6, 4, 7, 3, 9],
+                    backgroundColor: '#27ae60'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var ctx = document.getElementById("myChart2").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+                datasets: [{
+                    label: 'Quantidade de reports',
+                    data: [2, 5, 5, 3, 2, 3],
+                    backgroundColor: '#3498db'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@model IEnumerable<Conselho.Models.Disciplina>
+
+    @{
+        ViewBag.Title = "Index";
+
+    }
+
+    <body>
+        <button id="show-dialog" type="button" class="mdl-button">SELECIONAR DISCIPLINA</button>
+
+        <dialog class="mdl-dialog">
+            <p class="mdl-dialog__title">Selecione a disciplina</p>
+            <div class="mdl-dialog__content">
+                @foreach (var item in Model)
+                {
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="@Html.DisplayFor(modelItem => item.DisciplinaID)" value="@Html.DisplayFor(modelItem => item.DisciplinaID)" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        @Html.DisplayFor(modelItem => item.Nome)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                }
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button">Distribuir</button>
+                <button type="button" class="mdl-button close">Cancelar</button>
+            </div>
+        </dialog>
+
+        <script>
+            var dialog = document.querySelector('dialog');
+            var showDialogButton = document.querySelector('#show-dialog');
+
+            if (!dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+            }
+            showDialogButton.addEventListener('click', function () {
+                dialog.showModal();
+            });
+            dialog.querySelector('.close').addEventListener('click', function () {
+                dialog.close();
+            });
+        </script>
+    </body>*@
+
+
+

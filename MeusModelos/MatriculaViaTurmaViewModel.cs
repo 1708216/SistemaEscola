@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeusModelos
 {
-    class MatriculaViaTurmaViewModel
+    public class MatriculaViaTurmaViewModel
     {
         public Turma turma { get; set; }
         public List<Aluno> alunosParaMatricular { get; set; }

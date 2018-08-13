@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeusModelos
 {
-    class AtribuicaoDeAulaViewModel
+    public class AtribuicaoDeAulaViewModel
     {
         public int TurmaID { get; set; }
         public virtual Turma _Turma { get; set; }
